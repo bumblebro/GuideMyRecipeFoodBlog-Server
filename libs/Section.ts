@@ -183,4 +183,119 @@ export const subSections = {
       "Summer-Slow-Cooker-Recipes",
     ],
   },
+  Desserts: {
+    "Fruit-Based-Desserts": [
+      "Peach-Cobbler",
+      "Apple-Crisp",
+      "Berry-Parfait",
+      "Rhubarb-Bars",
+    ],
+    "Frozen-Desserts": [
+      "Homemade-Ice-Cream",
+      "Frozen-Yogurt",
+      "Popsicle-Recipes",
+      "Ice-Cream-Sandwiches",
+    ],
+    "Baked-Desserts": [
+      "Chocolate-Cake",
+      "Brownies",
+      "Cheesecake-Recipes",
+      "Bread-Pudding",
+    ],
+  },
+
+  "Special-Diet": {
+    "Vegan-Recipes": [
+      "Vegan-Mac-and-Cheese",
+      "Vegan-Chili",
+      "Tofu-Stir-Fry",
+      "Vegan-Brownies",
+    ],
+    "Gluten-Free": [
+      "Gluten-Free-Pancakes",
+      "GF-Banana-Bread",
+      "Gluten-Free-Cookies",
+    ],
+    "Keto-and-Low-Carb": [
+      "Keto-Chicken-Recipes",
+      "Zucchini-Noodles",
+      "Low-Carb-Desserts",
+    ],
+  },
+
+  "World-Cuisine": {
+    "Asian-Food": ["Thai-Curry", "Fried-Rice", "Spring-Rolls", "Sushi-Bowls"],
+    "Mexican-Food": ["Tacos", "Quesadillas", "Mexican-Street-Corn", "Churros"],
+    "Italian-Food": ["Lasagna", "Risotto", "Caprese-Salad", "Pasta-Carbonara"],
+  },
+
+  Fruit: {
+    "Summer-Fruits": ["Mango-Salsa", "Watermelon-Salad", "Berry-Smoothie"],
+    "Baked-Fruit": ["Baked-Apples", "Pear-Crisp", "Fruit-Tart"],
+  },
+
+  Drinks: {
+    Mocktails: ["Virgin-Mojito", "Cucumber-Mint-Cooler", "Lemonade-Recipes"],
+    Smoothies: [
+      "Green-Smoothie",
+      "Strawberry-Banana-Smoothie",
+      "Protein-Smoothie",
+    ],
+    "Coffee-and-Tea": ["Cold-Brew-Coffee", "Chai-Tea-Latte", "Matcha-Recipes"],
+  },
+
+  Cake: {
+    "Layer-Cakes": [
+      "Chocolate-Layer-Cake",
+      "Vanilla-Birthday-Cake",
+      "Red-Velvet-Cake",
+    ],
+    "Single-Serve": ["Mug-Cake", "Mini-Cupcakes", "Cake-Pops"],
+  },
+
+  Dairy: {
+    "Cheese-Based": ["Mac-and-Cheese", "Cheesecake", "Cheese-Platter"],
+    "Milk-and-Yogurt": ["Yogurt-Parfait", "Milkshake-Recipes", "Lassi-Drink"],
+  },
+
+  Vegetables: {
+    "Roasted-Vegetables": [
+      "Roasted-Brussels-Sprouts",
+      "Carrot-Fries",
+      "Zucchini-Bake",
+    ],
+    "Vegetable-Mains": [
+      "Stuffed-Peppers",
+      "Vegetable-Stir-Fry",
+      "Cauliflower-Steak",
+    ],
+  },
+
+  Meat: {
+    "Beef-Recipes": ["Ground-Beef-Tacos", "Beef-Stir-Fry", "Steak-Recipes"],
+    "Chicken-Recipes": [
+      "Chicken-Parmesan",
+      "Grilled-Chicken",
+      "Chicken-Stir-Fry",
+    ],
+    "Pork-Recipes": ["Pulled-Pork", "Pork-Chops", "Bacon-Dishes"],
+  },
+
+  "Healthy-Recipes": {
+    "Low-Calorie-Meals": [
+      "Zoodle-Stir-Fry",
+      "Grilled-Fish",
+      "Stuffed-Zucchini",
+    ],
+    "High-Protein-Recipes": [
+      "Protein-Bowls",
+      "Chicken-and-Quinoa",
+      "Cottage-Cheese-Pancakes",
+    ],
+    "Meal-Prep": [
+      "Make-Ahead-Lunches",
+      "Healthy-Bento-Box",
+      "Freezer-Friendly-Meals",
+    ],
+  },
 };
