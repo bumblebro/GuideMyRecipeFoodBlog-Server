@@ -378,6 +378,8 @@ async function Upload2() {
           const newBlog = await prisma.foodBlogs.create({
             data: reqres,
           });
+            await prisma.$disconnect();         
+          
           console.log("UPLOAD SUCCESSFULL", newBlog);
           successCount = successCount + 1;
           if (successCount < timestorun) {

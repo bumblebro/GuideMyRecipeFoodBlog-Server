@@ -49,4 +49,9 @@ model FoodBlogs {
   equipments         String[]     // Equipment names (an array of strings)
   creationDate      DateTime @default(now()) // Date the blog was created
   reviews           Json[]
+
+     @@index([section])
+  @@index([subsection])
+  @@index([subsubsection])
+  @@index([creationDate])
 }
