@@ -1,61 +1,3 @@
-// // This is your Prisma schema file,
-// // learn more about it in the docs: https://pris.ly/d/prisma-schema
-
-// // Looking for ways to speed up your queries, or scale easily with your serverless or edge functions?
-// // Try Prisma Accelerate: https://pris.ly/cli/accelerate-init
-
-// generator client {
-//   provider = "prisma-client-js"
-// }
-
-// datasource db {
-//   provider = "postgresql"
-//   url      = env("DATABASE_URL")
-// }
-
-// // model FoodBlogs {
-// //   id        String   @id @default(uuid())
-// //   author    String 
-// //   title     String     @unique
-// //   slug      String     @unique
-// //   imageurl String
-// //   imagealt String
-// //   quote String  
-// //   section  String  
-// //   subsection  String
-// //   subsubsection String 
-// //   content Json[]
-// //   seo Json
-// //   creationDate DateTime @default(now())
-// // }
-
-// model FoodBlogs {
-//   id                String   @id @default(uuid())
-//   author            String   // Name of the author
-//   quote             String   // Quote provided by the author
-//   section           String  
-//   subsection  String
-//   subsubsection String 
-//   title         String   @unique // Title of the page
-//   slug              String   @unique // URL-friendly slug for the blog
-//   imageurl          String   // URL of the main image
-//   imagealt          String   // Alt text for the main image
-//   content           Json[]     // Short and detailed description of the recipe
-//   instructions      String[]     // Step-by-step instructions for the recipe
-//   recipedescription String
-//   recipedetails     Json     // Recipe details for different serving sizes (1X, 2X, 3X, 4X)
-//   seo               Json     // SEO-related information (meta description, keywords, etc.)    
-//   faq               Json     // FAQ data (an array of objects with "question" and "answer" fields)
-//   equipments         String[]     // Equipment names (an array of strings)
-//   creationDate      DateTime @default(now()) // Date the blog was created
-//   reviews           Json[]
-
-//      @@index([section])
-//   @@index([subsection])
-//   @@index([subsubsection])
-//   @@index([creationDate])
-// }
-
 generator client {
   provider = "prisma-client-js"
 }
@@ -76,27 +18,20 @@ model FoodBlogs {
   slug              String   @unique
   imageurl          String
   imagealt          String
-  content           Json[]       // rich content, not filtered in queries
-  instructions      String[]     // array membership queries
+  content           Json[]
+  instructions      String[]
   recipedescription String
   recipedetails     Json
   seo               Json
   faq               Json
-  equipments        String[]     // array membership queries
+  equipments        String[]
   creationDate      DateTime @default(now())
   reviews           Json[]
 
-  // ✅ Indexes optimized for your actual query patterns:
-
-  // Composite indexes for filtering + sorting
-  @@index([section, creationDate(sort: Desc)], name: "idx_section_date")
-  @@index([subsection, creationDate(sort: Desc)], name: "idx_subsection_date")
-  @@index([subsubsection, creationDate(sort: Desc)], name: "idx_subsubsection_date")
-
-  // Stable cursor-based pagination (creationDate + id)
   @@unique([creationDate, id], name: "uniq_date_id")
-
-  // Text search: enable trigram indexes in Postgres (see below)
-  @@index([title], name: "idx_title_btree") // exact lookups are already unique
-  @@index([recipedescription], name: "idx_recipedescription_btree")
+  @@index([section, creationDate(sort: Desc)], map: "idx_section_date")
+  @@index([subsection, creationDate(sort: Desc)], map: "idx_subsection_date")
+  @@index([subsubsection, creationDate(sort: Desc)], map: "idx_subsubsection_date")
+  @@index([title], map: "idx_title_btree")
+  @@index([recipedescription], map: "idx_recipedescription_btree")
 }
