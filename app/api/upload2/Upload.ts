@@ -187,7 +187,7 @@ The structure of the blog should follow this format:
    - Include a relevant quote from the author that reflects the theme of the blog and sets the tone.
 
 2. **Page Title:**
-   - The main title of the blog post [Curiosity Headlines].
+   - The main title of the blog post.
 
 3. **Image Query:**
    - Generate a query for the main image that aligns with the blog content.
@@ -363,7 +363,7 @@ Make sure the content is thoroughly researched and provides value to readers. Av
         },
         pageTitle: {
           type: SchemaType.STRING,
-          description: "Title of the page [Curiosity Headline]",
+          description: "Title of the page",
           nullable: false,
         },
         imageQuery: {
